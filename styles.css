@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 /* --- Modern Style Reset & Core Variables --- */
+
 :root {
   --bg-primary: #ffffff;
   --bg-secondary: #f9fafb;
@@ -18,7 +19,7 @@
   --marina: #d946ef;
 }
 
-/* FIXED ENGINE: Linked directly with your JavaScript data-theme handler */
+/* CONVERTED FOR LOCAL: Linked directly to documentElement data-theme attribute */
 [data-theme="dark"] {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
@@ -39,7 +40,7 @@
 }
 
 body {
-  font-family: var(--font-stack), serif;
+  font-family: var(--font-stack), sans-serif;
   background-color: var(--bg-secondary);
   color: var(--text-main);
   font-size: var(--base-font-size);
@@ -279,6 +280,7 @@ footer {
   color: var(--accent);
 }
 
+/* Hidden elements helper style utility */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -309,6 +311,7 @@ footer {
     align-items: center;
     text-align: left;
   }
+  /* FIXED: Removed the stray broken "p" selector syntax */
   .main-article img {
     width: 100%;
     max-width: 260px;
