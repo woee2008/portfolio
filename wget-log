@@ -1,0 +1,12 @@
+The destination name is too long (262), reducing to 236
+--2026-05-17 11:33:05--  https://lens.usercontent.google.com/image?vsrid=CO2X3aKsvPGcZBACGAEiJDVhZmQxZjUyLWQ0ZjktNDk5ZC1iOTQyLWI0NjIyYTgwMDI4YjJ8IgJ0cCgwQnQKLmxmZS1kdW1teTozMzRmMDBiYy0yMDYzLTQwMDQtYmNjNC0yOWRhNGNhZTc0MzgSQgpAL2Jucy90cC9ib3JnL3RwL2Jucy9sZW5zLWZyb250ZW5kLWFwaS9wcm9kLmxlbnMtZnJvbnRlbmQtYXBpLzIxODjYzfa6nMCUAw
+Resolving lens.usercontent.google.com (lens.usercontent.google.com)... 142.250.134.132, 2404:6800:4000:101f::84
+Connecting to lens.usercontent.google.com (lens.usercontent.google.com)|142.250.134.132|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 0 [image/jpeg]
+Saving to: ‘./images/image?vsrid=CO2X3aKsvPGcZBACGAEiJDVhZmQxZjUyLWQ0ZjktNDk5ZC1iOTQyLWI0NjIyYTgwMDI4YjJ8IgJ0cCgwQnQKLmxmZS1kdW1teTozMzRmMDBiYy0yMDYzLTQwMDQtYmNjNC0yOWRhNGNhZTc0MzgSQgpAL2Jucy90cC9ib3JnL3RwL2Jucy9sZW5zLWZyb250ZW5kLWFwaS9wcm9kLmxlbnMtZnJvbnRl’
+
+                 image?vsrid=CO2X3     [<=>                                                            ]       0  --.-KB/s               image?vsrid=CO2X3aKsvPGcZBACGAEiJD     [ <=>                                                           ]       0  --.-KB/s    in 0s      
+
+2026-05-17 11:33:05 (0.00 B/s) - ‘./images/image?vsrid=CO2X3aKsvPGcZBACGAEiJDVhZmQxZjUyLWQ0ZjktNDk5ZC1iOTQyLWI0NjIyYTgwMDI4YjJ8IgJ0cCgwQnQKLmxmZS1kdW1teTozMzRmMDBiYy0yMDYzLTQwMDQtYmNjNC0yOWRhNGNhZTc0MzgSQgpAL2Jucy90cC9ib3JnL3RwL2Jucy9sZW5zLWZyb250ZW5kLWFwaS9wcm9kLmxlbnMtZnJvbnRl’ saved [0/0]
+
