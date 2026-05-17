@@ -9,16 +9,15 @@
   --border: #e5e7eb;
   --card-bg: #ffffff;
   --font-stack: 'Inter', sans-serif;
-  --transition-speed: 0.25s;
+  --transition-speed: 0.3s; /* Marginally slower for a premium, organic feel */
   
-  /* Fallback definitions for missing custom properties */
   --base-font-size: 1rem;
   --ld-text: #4b5563;
   --marina: #d946ef;
 }
 
-/* Smart Dark Mode Switch Engine via :has() Selector */
-.wrapper:has(#dark:checked) {
+/* REPLACED ENGINE: Global Data-Attribute Selector */
+[data-theme="dark"] {
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --text-main: #f8fafc;
@@ -41,8 +40,8 @@ body {
   font-family: var(--font-stack);
   background-color: var(--bg-secondary);
   color: var(--text-main);
-  transition: background-color var(--transition-speed), color var(--transition-speed);
   line-height: 1.6;
+  /* Transitions added globally to structural containers */
   transition: background-color var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out;
 }
 
@@ -54,6 +53,7 @@ body {
   background-color: var(--bg-primary);
   min-height: 100vh;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  /* Added transition to match background container speed */
   transition: background-color var(--transition-speed) ease-in-out;
 }
 
@@ -88,7 +88,7 @@ header {
   font-size: 0.85rem;
   color: var(--text-muted);
   z-index: 2;
-  transition: color var(--transition-speed);
+  transition: color var(--transition-speed) ease-in-out, background-color var(--transition-speed) ease-in-out;
 }
 
 .radio-switch input[type="radio"]:checked + label {
@@ -112,6 +112,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
+  transition: color var(--transition-speed) ease-in-out;
 }
 
 .bio-text-wrapper h1 a {
@@ -119,12 +120,14 @@ header {
   font-weight: 700;
   color: var(--text-main);
   text-decoration: none;
+  transition: color var(--transition-speed) ease-in-out;
 }
 
 .bio-text-wrapper p {
   margin-top: 1rem;
   color: var(--text-muted);
   font-size: 1.1rem;
+  transition: color var(--transition-speed) ease-in-out;
 }
 
 .profile-img {
@@ -133,6 +136,7 @@ header {
   border-radius: 50%;
   justify-self: center;
   border: 4px solid var(--border);
+  transition: border-color var(--transition-speed) ease-in-out;
 }
 
 /* --- Icons System --- */
@@ -153,7 +157,7 @@ header {
   width: 28px;
   height: 28px;
   fill: var(--text-muted);
-  transition: fill var(--transition-speed), transform var(--transition-speed);
+  transition: fill var(--transition-speed) ease-in-out, transform var(--transition-speed) ease-in-out;
 }
 
 .icons a:hover svg {
@@ -167,6 +171,7 @@ header {
   border-bottom: 2px solid var(--border);
   padding-bottom: 0.5rem;
   margin: 4rem 0 2rem 0;
+  transition: border-color var(--transition-speed) ease-in-out;
 }
 
 /* --- Projects Feed --- */
@@ -191,11 +196,13 @@ header {
 .project h3 {
   font-size: 1.4rem;
   margin-bottom: 0.75rem;
+  transition: color var(--transition-speed) ease-in-out;
 }
 
 .project p {
   color: var(--text-muted);
   margin-bottom: 1.5rem;
+  transition: color var(--transition-speed) ease-in-out;
 }
 
 .project img {
@@ -204,9 +211,9 @@ header {
   object-fit: cover;
 }
 
-/* Special Border for Custom Images */
 .img-border {
   border: 1px solid var(--border);
+  transition: border-color var(--transition-speed) ease-in-out;
 }
 
 /* Technology Pill Tags */
@@ -225,6 +232,7 @@ header {
   font-size: 0.8rem;
   font-weight: 600;
   border: 1px solid var(--border);
+  transition: background-color var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out, border-color var(--transition-speed) ease-in-out;
 }
 
 /* --- Footer & Auxiliary Links --- */
@@ -232,20 +240,20 @@ footer {
   text-align: center;
 }
 
-/* FIXED class selector map to target .footer-grid */
 .footer-grid {
   color: var(--ld-text);
   line-height: 1.5;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  transition: color var(--transition-speed) ease;
+  transition: color var(--transition-speed) ease-in-out;
 }
 
 .footer-grid h3 {
   font-size: calc(var(--base-font-size) * 0.85);
-  color: var(--accent); /* Matched layout colors */
+  color: var(--accent);
   margin-bottom: 0.5rem;
+  transition: color var(--transition-speed) ease-in-out;
 }
 
 .footer-text-box ul {
@@ -262,14 +270,13 @@ footer {
 .footer-text-box a {
   color: var(--text-muted);
   text-decoration: none;
-  transition: color var(--transition-speed);
+  transition: color var(--transition-speed) ease-in-out;
 }
 
 .footer-text-box a:hover {
   color: var(--accent);
 }
 
-/* Hidden elements helper style utility */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -302,10 +309,10 @@ footer {
   }
   .main-article img {
     width: 100%;
-  max-width: 260px;
-  border-radius: 50%;
-  justify-self: center;
-  border: 4px solid var(--border);
+    max-width: 260px;
+    border-radius: 50%;
+    justify-self: center;
+    border: 4px solid var(--border);
   }
   .icons {
     justify-content: flex-start;

@@ -2,16 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightRadio = document.getElementById('light');
     const darkRadio = document.getElementById('dark');
 
-    // Safe encapsulation to apply selection across the browser layout tree
+    // Central function to update both the DOM control state and the global attribute
     function applyTheme(theme) {
         if (theme === 'dark') {
             darkRadio.checked = true;
+            document.documentElement.setAttribute('data-theme', 'dark');
         } else {
             lightRadio.checked = true;
+            document.documentElement.setAttribute('data-theme', 'light');
         }
     }
 
-    // Step 1: Detect cached profiles or fallbacks to native OS settings
+    // Detect system preference or local storage cached setting
     const savedTheme = localStorage.getItem('portfolio-theme');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -23,15 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme('light');
     }
 
-    // Step 2: Register structural event hooks to monitor interactions
+    // Listen for manual interactions and save configurations locally
     lightRadio.addEventListener('change', () => {
         if (lightRadio.checked) {
+            applyTheme('light');
             localStorage.setItem('portfolio-theme', 'light');
         }
     });
 
     darkRadio.addEventListener('change', () => {
         if (darkRadio.checked) {
+            applyTheme('dark');
             localStorage.setItem('portfolio-theme', 'dark');
         }
     });
